@@ -1,0 +1,19 @@
+<!-- Contenedor principal del componente -->
+<main class="main">
+  <!-- Encabezado que indica que se está mostrando la lista de usuarios -->
+  <h2>Usuarios</h2>
+
+  <!-- Lista no ordenada que contendrá los enlaces a los usuarios -->
+  <ul>
+    <!-- Cada elemento de la lista es un enlace hacia un usuario específico -->
+    <!-- [routerLink] es una directiva de Angular que permite navegación hacia rutas definidas -->
+    <!-- Aquí '/usuarios' es la ruta base y el segundo valor es el ID del usuario -->
+    <li><a [routerLink]="['/usuarios', 1]">Usuario 1</a></li>
+    <li><a [routerLink]="['/usuarios', 2]">Usuario 2</a></li>
+    <!-- Nota: en un caso real, estos elementos podrían generarse dinámicamente con *ngFor -->
+  </ul>
+
+  <!-- RouterOutlet es un espacio donde se renderizará el componente hijo según la ruta -->
+  <!-- Por ejemplo, al hacer click en un usuario, aquí se mostrará UsuarioDetalleComponent -->
+  <router-outlet></router-outlet>
+</main>

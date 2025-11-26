@@ -1,0 +1,24 @@
+<!-- Contenedor principal del componente -->
+<main class="main">
+  <!-- Encabezado que indica que esta es la página de inicio -->
+  <h2>Inicio</h2>
+
+  <!-- Mensaje de bienvenida -->
+  <p>Bienvenido a la página de inicio.</p>
+
+  <!-- Botón para activar la promoción -->
+  <!-- Solo se muestra si la promoción NO está activa (*ngIf="!promoActiva") -->
+  <!-- Al hacer click, se llama al método activarPromo() del componente -->
+  <button (click)="activarPromo()" *ngIf="!promoActiva">Activar promo</button>
+
+  <!-- Botón para desactivar la promoción -->
+  <!-- Solo se muestra si la promoción está activa (*ngIf="promoActiva") -->
+  <!-- Al hacer click, se llama al método desactivarPromo() del componente -->
+  <button (click)="desactivarPromo()" *ngIf="promoActiva">Desactivar promo</button>
+
+  <!-- Mensaje que indica que la promoción está activa -->
+  <!-- Solo se muestra si promoActiva es true -->
+  <p *ngIf="promoActiva">
+    🎉 ¡Promoción activa: Black Friday!
+  </p>
+</main>
