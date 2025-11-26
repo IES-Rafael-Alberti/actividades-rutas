@@ -2,7 +2,7 @@
 import { Component } from '@angular/core';
 
 // Importamos Router desde @angular/router para poder navegar a otras rutas
-import {Router, RouterLink} from '@angular/router';
+import {Router} from '@angular/router';
 
 // Importamos nuestro servicio de autenticación personalizado
 import { AuthService } from '../auth/auth.service';
@@ -19,9 +19,7 @@ import { AuthService } from '../auth/auth.service';
   // Selector del componente: nombre que se usará en el HTML para insertarlo.
 
   // Aquí se pueden importar otros componentes, directivas o pipes necesarios para el template.
-  imports: [
-    RouterLink
-  ],
+  imports: [],
 
   // URL del archivo de plantilla HTML que define la vista del componente.
   templateUrl: './login.component.html',
